@@ -1,13 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upload</title>
-</head>
-<body>
-<h1>UPLOAD</h1>
-</body>
-</html>
+{% extends 'inner-page.html' %}
+{% block body %}
+       <!---Upload image--->
+
+    <form method="post" enctype="multipart/form-data" class="text-center d-block m-auto mb-4">
+        {% csrf_token %}
+
+         <h2>Upload Image</h2>
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+        <a href="{% url 'image' %}" class="btn btn-warning">Display images</a>
+    </form>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+{% endblock %}

@@ -9,9 +9,11 @@ urlpatterns = [
     path('innerpage/', views.inner, name='inner'),
     path('register/', views.register, name='register'),
     path('login/', views.login, name='register'),
-    path('upload/', views.upload, name='upload'),
     path('appointment/', views.appointment, name='appointment'),
     path('appointmentdetails/', views.appointmentdetails, name='appointment details'),
     path('products/', views.details, name='products'),
     path('adminhome/', views.adminhome, name='adminhome'),
+    path('uploadimage/', views.upload_image, name='upload'),
+    path('showimage/', views.show_image, name='image'),
+    path('imagedelete/<int:id>', views.imagedelete),
 ]

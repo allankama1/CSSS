@@ -6,6 +6,9 @@
     {% csrf_token %}
 </head>
 <body>
+{% block body %}
 <h2>WELCOME {{ members.username }}.You are logged in as an admin</h2>
+    <a href="{% url 'upload' %}" class=" btn btn-primary">Uplaod</a>
+{% endblock %}
 </body>
 </html>
