@@ -69,11 +69,11 @@ def upload_image(request):
             return redirect('/showimage')
     else:
         form = ImageUploadForm()
-    return render(request, 'upload_image.html', {'form': form})
+    return render(request, 'up load.html', {'form': form})
 
 def show_image(request):
     images = ImageModel.objects.all()
-    return render(request, 'show_image.html', {'images': images})
+    return render(request, 'showimages.html', {'images': images})
 
 def imagedelete(request, id):
     image = ImageModel.objects.get(id=id)
